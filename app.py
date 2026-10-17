@@ -240,22 +240,24 @@ def ticket_details(ticket_id):
 button,.link{{display:inline-block;background:#2563eb;color:white;padding:11px 16px;border:0;border-radius:8px;text-decoration:none;font-weight:bold;cursor:pointer}}.secondary{{background:#475569}}.entry{{padding:12px;margin-bottom:10px;background:#f8fafc;border-radius:8px;overflow-wrap:anywhere}}.entry p{{white-space:pre-wrap}}small{{color:#64748b}}.footer{{border-top:1px solid #e2e8f0;padding:20px 30px;display:flex;gap:10px;flex-wrap:wrap}}
 @media(max-width:500px){{body{{padding:18px 10px}}.header,.content,.section,.footer{{padding:20px}}}}
 
-.card-link {
+
+
+.card-link {{
     display: block;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-}
+}}
 
-.card-link .card {
+.card-link .card {{
     height: 100%;
     transition: transform 0.2s, box-shadow 0.2s;
-}
+}}
 
-.card-link:hover .card {
+.card-link:hover .card {{
     transform: translateY(-3px);
     box-shadow: 0 6px 18px #17255420;
-}
+}}
 
 </style></head><body><div class="ticket">
 <div class="header"><h1>Ticket #{ticket['id']}</h1><p>IT Helpdesk / Ticket Details</p></div>
