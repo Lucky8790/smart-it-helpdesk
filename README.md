@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# Smart IT Helpdesk \& Ticket Management System
 
 
@@ -104,3 +105,7 @@ A web-based application built to help IT support teams manage employee issues, t
 
 
 
+=======
+# smart-it-helpdesk
+A Flask-based IT helpdesk and ticket management system
+>>>>>>> c40c8a3c5c74aad1bc8e9c9e2399423b8ea64eb8
