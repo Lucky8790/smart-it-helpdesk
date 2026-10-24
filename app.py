@@ -208,17 +208,25 @@ button{{background:#2563eb;color:white;border:0;padding:11px 15px;border-radius:
 @app.route("/ticket/<int:ticket_id>")
 def ticket_details(ticket_id):
     conn = get_db_connection()
-    ticket = conn.execute("SELECT * FROM tickets WHERE id = ?", (ticket_id,)).fetchone()
-    comments = conn.execute(
-        "SELECT * FROM ticket_comments WHERE ticket_id = ? ORDER BY created_at DESC, id DESC",
-        (ticket_id,),
-    ).fetchall()
-    activity = conn.execute(
-        "SELECT * FROM ticket_activity WHERE ticket_id = ? ORDER BY created_at DESC, id DESC",
-        (ticket_id,),
-    ).fetchall()
-    conn.close()
-    if ticket is None:
+    try:
+        ticket = conn.execute(
+            "SELECT * FROM tickets WHERE id = ?", (ticket_id,)
+        ).fetchone()
+
+        if ticket is None:
+            return "Ticket not found.", 404
+
+        comments = conn.execute(
+            "SELECT * FROM ticket_comments WHERE ticket_id = ? ORDER BY created_at DESC, id DESC",
+            (ticket_id,),
+        ).fetchall()
+
+        activity = conn.execute(
+            "SELECT * FROM ticket_activity WHERE ticket_id = ? ORDER BY created_at DESC, id DESC",
+            (ticket_id,),
+        ).fetchall()
+    finally:
+        conn.close()
         return "Ticket not found.", 404
 
     comment_html = "".join(
