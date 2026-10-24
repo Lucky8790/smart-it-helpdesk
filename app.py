@@ -2,7 +2,9 @@ from flask import Flask, request, redirect, Response
 import csv
 import io
 import sqlite3
+import logging
 from markupsafe import escape
+logging.basicConfig(level=logging.ERROR)
 
 app = Flask(__name__)
 
