@@ -421,6 +421,67 @@ def export_tickets_csv():
 
 
 initialize_database()
+@app.errorhandler(404)
+def page_not_found(error):
+    return """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Page Not Found | IT Helpdesk</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f4f6fb;
+                color: #202b40;
+                text-align: center;
+                padding: 80px 20px;
+            }
+            a {
+                color: #2563eb;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>404 - Page Not Found</h1>
+        <p>The page you are looking for does not exist.</p>
+        <a href="/">Return to Dashboard</a>
+    </body>
+    </html>
+    """, 404
+
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    app.logger.error("Internal server error: %s", error)
+    return """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Server Error | IT Helpdesk</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f4f6fb;
+                color: #202b40;
+                text-align: center;
+                padding: 80px 20px;
+            }
+            a {
+                color: #2563eb;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>500 - Something Went Wrong</h1>
+        <p>An unexpected server error occurred. Please try again later.</p>
+        <a href="/">Return to Dashboard</a>
+    </body>
+    </html>
+    """, 500
 
 if __name__ == "__main__":
     app.run(debug=True)
