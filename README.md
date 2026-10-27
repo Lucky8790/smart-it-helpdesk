@@ -1,111 +1,86 @@
-<<<<<<< HEAD
-\# Smart IT Helpdesk \& Ticket Management System
+# Smart IT Helpdesk & Ticket Management System
 
+## Project Overview
 
+The Smart IT Helpdesk & Ticket Management System is a web-based application developed using Python and Flask. It helps IT support teams manage employee issues, create and track support tickets, update ticket statuses, and maintain a history of ticket activities.
 
-\## Project Overview
+## Technologies Used
 
-A web-based application built to help IT support teams manage employee issues, track support tickets, and monitor their status.
+- **Programming Language:** Python
+- **Web Framework:** Flask
+- **Database:** SQLite
+- **Frontend:** HTML and CSS
+- **Version Control:** Git and GitHub
 
+## Features
 
+- Dashboard for viewing support tickets and status summaries
+- Create and view support tickets
+- Search tickets and filter them by status and priority
+- View individual ticket details
+- Edit ticket information
+- Update ticket status
+- Add comments to tickets
+- Track ticket changes through activity history
+- Export ticket data to CSV
+- Validate ticket input fields
+- Custom 404 and 500 error pages
+- Error logging for troubleshooting
 
-\## Technologies Used
+## Installation and Setup
 
-\- Python
+### Prerequisites
 
-\- Flask
+- Python 3.10 or a compatible Python version
+- pip (Python package installer)
+- Git (optional, for cloning the repository)
 
-\- SQLite
+### 1. Clone the Repository
 
-\- HTML and CSS
+```bash
+git clone https://github.com/Lucky8790/smart-it-helpdesk.git
+cd smart-it-helpdesk
+```
 
+Alternatively, download the project and open Command Prompt inside the project folder.
 
+### 2. Install Flask
 
-\## Features
+```bash
+python -m pip install flask
+```
 
-\- Dashboard with ticket summaries and charts
+### 3. Run the Application
 
-\- Create and view support tickets
+```bash
+python app.py
+```
 
-\- Search and filter tickets
+### 4. Open the Application
 
-\- Update ticket status and edit ticket details
+Open your browser and visit:
 
-\- Add comments to tickets
+http://127.0.0.1:5000
 
-\- Track changes through activity history
+## Learning Outcomes
 
-\- Export ticket data to CSV
+- Building web applications with Flask
+- Working with SQLite databases
+- Performing CRUD operations
+- Implementing search and filtering
+- Validating user input
+- Tracking ticket activity and comments
+- Exporting data to CSV
+- Using Git and GitHub for version control
+- Handling application errors and logging
 
+## Future Enhancements
 
+- User authentication and role-based access control
+- Email notifications for ticket updates
+- Improved dashboard analytics
+- Cloud deployment
 
-\## Installation and Setup
+## Author
 
-
-
-1\. Install Python on your computer.
-
-2\. Open Command Prompt in the project folder.
-
-3\. Install Flask:
-
-
-
-&#x20;  ```bash
-
-&#x20;  pip install flask
-
-&#x20;  ```
-
-
-
-4\. Start the application:
-
-
-
-&#x20;  ```bash
-
-&#x20;  python app.py
-
-&#x20;  ```
-
-
-
-5\. Open this address in your browser:
-
-
-
-&#x20;  `http://127.0.0.1:5000`
-
-
-
-\## Learning Outcomes
-
-\- Python web development with Flask
-
-\- SQLite database operations
-
-\- CRUD operations
-
-\- Search and filtering
-
-\- Activity tracking
-
-\- CSV data export
-
-
-
-\## Future Enhancements
-
-\- User authentication and role-based access
-
-\- Email notifications
-
-\- Cloud deployment
-
-
-
-=======
-# smart-it-helpdesk
-A Flask-based IT helpdesk and ticket management system
->>>>>>> c40c8a3c5c74aad1bc8e9c9e2399423b8ea64eb8
+Developed as a learning project to practice Python web development and IT support ticket management.
