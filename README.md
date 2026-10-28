@@ -84,3 +84,24 @@ http://127.0.0.1:5000
 ## Author
 
 Developed as a learning project to practice Python web development and IT support ticket management.
+## 📸 Application Screenshots
+
+### 1. Dashboard Overview
+View total tickets and ticket counts by status.
+
+![Smart IT Helpdesk Dashboard](screenshots/dashboard.png)
+
+### 2. Ticket Details
+View issue information, employee details, priority, and current status.
+
+![Ticket Details Page](screenshots/ticket-details.png)
+
+### 3. Search, Filters, and Ticket Management
+Search tickets and filter by status or priority. Update ticket statuses from the dashboard.
+
+![Search and Filters](screenshots/search-filters.png)
+
+### 4. Create a New Ticket
+Create a support ticket by entering employee details, issue title, description, and priority.
+
+![Create Ticket Form](screenshots/create-ticket.png)
