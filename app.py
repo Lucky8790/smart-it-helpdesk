@@ -227,7 +227,7 @@ def ticket_details(ticket_id):
         ).fetchall()
     finally:
         conn.close()
-        return "Ticket not found.", 404
+    
 
     comment_html = "".join(
         f"<div class='entry'><p>{escape(comment['comment'])}</p><small>{escape(str(comment['created_at']))}</small></div>"
